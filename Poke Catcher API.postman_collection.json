@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "da8248a1-eb53-4b78-8ea9-b2085a1a0b7b",
+		"name": "Poke Catcher API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5844051"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tamas.sallai.hu@gmail.com\",\r\n    \"password\": \"asd_123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/auth/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"displayName\": \"TamasSallai\",\r\n    \"email\": \"tamas.sallai.hu@gmail.com\",\r\n    \"password\": \"asd_123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/auth/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/auth/me",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "caught",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/pokemon/caught",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"caught"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "catch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/pokemon/catch",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"catch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "release",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/pokemon/release",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"release"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
