@@ -29,7 +29,7 @@ export class PokemonController {
   catch(@Body() dto: CatchDto, @Req() req: Request) {
     const user = req.user!;
 
-    return this.pokemonService.catch(user.id, dto.pokeId, dto.name);
+    return this.pokemonService.catch(user.id, Number(dto.pokeId), dto.name);
   }
 
   @Delete('release/:pokeId')
